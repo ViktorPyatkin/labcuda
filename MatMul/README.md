@@ -1,10 +1,11 @@
-# CUDA-labs
+# labcuda
 CUDA, python3, PyCUDA, matrix multiplication
-- In this program matrix multiplication had been developed by using python3, CUDA, PyCUDA in a free version of Google Collab
-- The PyCUDA's main feature allows to build kernel on C++, then running one on GPU
-- One of the fastest way to multiply matrix is to use numpy.dot(), because its realization builded on C
-- In this work I've compared a time running of two ways on gpu with numpy.dot() and with C++ kernel in PyCUDA on the different matrix sizes
-- Mean results
+Работа выполнялась с помощью: python3, CUDA, Google Colab
+- Основная особенность PyCUDA позволяет создавать ядро на C++, а затем запускать его на GPU.
+- Одним из самых быстрых способов умножения матрицы является использование numpy.dot(), поскольку его реализация построена на C
+- В этой работе я сравнил время работы двух способов на gpu с numpy.dot() и с ядром C++ в PyCUDA на матрицах разного размера.
+
+Результаты:
   |  N  | CPU time, ms | GPU time, ms | Speedup|
   |:---:|:------------:|:------------:|:------:|
   | 128 |        0.122 |        0.422 |    0.29|
@@ -12,5 +13,6 @@ CUDA, python3, PyCUDA, matrix multiplication
   | 512 |        4.498 |        2.164 |    2.08|
   |1024 |       33.361 |        9.894 |    3.37|
   |2048 |      258.712 |       62.114 |    4.17|
-- Conclusion:
-  - As we can see, on the tiny matrix sizes CPU calculate better than GPU in several times, but, with the matrix size growing, GPU shows significant increasing, in compare with CPU. This means the most reasonable use of the GPU, instead of CPU, for multiplying high-sizes matrix.
+
+Заключение:
+  Как можно увидеть, на матрицах малых размеров CPU вычисляет лучше GPU в несколько раз, но с ростом размера матрицы, GPU показывает значительный рост, по сравнению с CPU. Это означает, что для перемножения матриц больших размеров наиболее целесообразно использовать GPU, а не CPU.
